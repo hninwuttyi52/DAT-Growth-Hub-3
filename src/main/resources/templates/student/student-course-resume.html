@@ -18,8 +18,10 @@
 						<div class="card">
 							<div class="row g-0">
 								<div class="col-md-3">
-									<img th:src="@{/public/assets/images/courses/4by3/01.jpg}"
-										class="rounded-2" alt="Card image">
+									<img
+													th:if="${enrolledCourse.courses != null && enrolledCourse.courses.courseImageFileName != null}"
+													th:src="@{'/private/course/course-image-file/' + ${enrolledCourse.courses.courseImageFileName}}"
+													class="rounded">
 								</div>
 								<div class="col-md-9">
 									<div class="card-body">

@@ -63,7 +63,7 @@
 							<!-- Table body START -->
 							<tbody>
 								<!-- Table item -->
-								<tr th:each="certificate : ${certificates}">
+								<tr th:each="certificate : ${certificates}" th:if="${certificate.users.id} == ${user_id}">
 									<!-- Table data -->
 									<td>
 										<div class="d-flex align-items-center">
